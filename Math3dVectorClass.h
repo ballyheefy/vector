@@ -24,13 +24,17 @@ public:
 		_z = *dp;
 	}
 
+	Math3dVectorClass(const Math3dVectorClass *v) : _x(v->_x), _y(v->_y), _z(v->_z) {
+		// the copy constructor
+	}
+
 	Math3dVectorClass(const Math3dVectorClass& v) : _x(v._x), _y(v._y),_z(v._z) {
 		// the copy constructor
 	}
 
 	const double getX(void) { return _x; }
 	const double getY(void) { return _y; }
-	const double getZ(void) { return _x; }
+	const double getZ(void) { return _z; }
 	void setX(const double x) { _x = x; }
 	void setY(const double y) { _y = y; }
 	void setZ(const double z) { _z = z; }
